@@ -1,0 +1,33 @@
+server:
+  port: 2023
+
+token-uri: https://api.ishenim.kg/wssubject/account/token
+credit-info-uri: https://api.ishenim.kg/wssubject/subject/search
+credit-history-uri: https://ws.ishenim.kg/WsReport/v5.59/service.svc
+soap-action-uri: http://creditinfo.com/CB5/IReportPublicServiceBase/GetPdfReport
+cert-path: impl/src/main/resources/certs/cbs-live-cbk-mbank-service-user.pfx
+cert-password: Welcome1@3
+basic-auth: Basic Y2JrX21iYW5rOldlbGNvbWUxQDM=
+login: KGLogin
+password: hfYV9inctvw94LhHcRfV6s1TUKyu2qKFUFPKWm9GifpLieSmhxp5beEiuQOtjudyQdpeTXZMuoiVVusOb7X17kp09gbrUAma
+
+logging:
+  level:
+    org:
+      springframework:
+        web: TRACE
+
+spring:
+  datasource:
+    username: postgres
+    password: A45d464748
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/creditinfo
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
